@@ -2,17 +2,18 @@
 #include "include/database.h"
 
 int main(int arg_count, char *args[]) {
-    if( arg_count > 1 ) {
         List SimpleList;
+        database data;
+
+    if( arg_count > 1 ) {
         SimpleList.name = string(args[1]);
         SimpleList.print_menu();
+        data.write(SimpleList.list);
+        data.read();
     }
     else {
         cout << "Username not supplied... exiting." << endl;
     }
-
-        database data;
-        data.write();
 
     return 0;
 }

@@ -14,7 +14,7 @@ void List::print_menu() {
     cin >> choice;
 
     if( choice == 4 ) {
-        exit(0);
+        return;
     }
     else if ( choice == 1 ) {
         add_item();
@@ -77,7 +77,6 @@ void List::print_list() {
         cout << " * " << list[list_index] << "\n";
     }
 
-    cout << "There are currently no items in the list!\n\n";
     cout << "M - Menu \n";
     char choice;
     cin >> choice;

@@ -7,7 +7,6 @@ using namespace std;
 class database {
     private:
     protected:
-
     public:
     database(){
         //constructor
@@ -18,6 +17,6 @@ class database {
     vector<string> list;
     string name;
 
-    void write();
+    void write(vector<string> list);
     void read();
 };
