@@ -15,10 +15,12 @@ class List {
     vector <vector<string>> MainList;
     vector<string> list;
     string name;
+    int CurrentUserIndex;
 
     void print_menu();
     void print_list();
     void add_item();
     void delete_item();
-    void find_UserList();
+    bool find_UserList();
+    void save_list();
 };
