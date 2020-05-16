@@ -73,11 +73,11 @@ void List::print_list() {
     cout << "\n\n";
     cout << "***** Printing List *****\n\n";
 
-    for( int list_index=0; list_index < (int)list.size(); list_index++ ) {
+    for ( int list_index=0; list_index < (int)list.size(); list_index++ ) {
         cout << " * " << list[list_index] << "\n";
     }
 
-    cout << "The list is currently empty!\n\n";
+    cout << "There are currently no items in the list!\n\n";
     cout << "M - Menu \n";
     char choice;
     cin >> choice;
