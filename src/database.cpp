@@ -1,13 +1,15 @@
 #include "include/database.h"
 
-void database::write(vector<string> list) {
+void database::write(vector<vector<string>> MainList) {
 
     ofstream db;
     db.open("db/lists.sl");
 
     if( db.is_open() ) {
-        for ( int list_index=0; list_index < (int)list.size(); list_index++ ) {
-            db << list[list_index] << "\n";
+        for ( int user_index=0; user_index < (int)MainList[user_index].size(); user_index++ ) {
+            for ( int list_index=0; list_index < (int)MainList[user_index][list_index].size(); list_index++) {
+                db << MainList[user_index][list_index] << "\n";
+            }
         }
     }
     else {
@@ -18,14 +20,30 @@ void database::write(vector<string> list) {
 
 }
 
-void database::read() {
+vector<vector<string>> database::read() {
     string line;
     ifstream db;
+
+    vector<string> UserList;
+
     db.open("db/lists.sl");
 
     if ( db.is_open() ) {
         while ( getline(db,line,'\n') ) {
-            cout << line << "\n";
+            if( line.front() == '#' ) {
+                cout << "Found hashtag at:" << line << "\n";
+                line.erase(line.begin());
+                UserList.push_back(line);
+            }
+            else if ( line.front() == '%' ) {
+                cout << "Found a percent sign: " << line << "\n";
+                MainList.push_back(UserList);
+                UserList.clear();
+            }
+            else {
+                cout << "Found Item(s): " << line << "\n";
+                UserList.push_back(line);
+            }
         }
     }
     else {
@@ -33,5 +51,7 @@ void database::read() {
     }
 
     db.close();
+
+return MainList;
 
 }
