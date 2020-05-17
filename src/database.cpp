@@ -37,17 +37,14 @@ vector<vector<string>> database::read() {
     if ( db.is_open() ) {
         while ( getline(db,line,'\n') ) {
             if( line.front() == '#' ) {
-                cout << "Found hashtag at:" << line << "\n";
                 line.erase(line.begin());
                 UserList.push_back(line);
             }
             else if ( line.front() == '%' ) {
-                cout << "Found a percent sign: " << line << "\n";
                 MainList.push_back(UserList);
                 UserList.clear();
             }
             else {
-                cout << "Found Item(s): " << line << "\n";
                 UserList.push_back(line);
             }
         }

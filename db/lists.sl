@@ -1,16 +1,3 @@
-#ElektricHeart
-Sai
-Krishna
-Malladi
-testing
-adding
-hello
-%
-#Doppelganger
-Hi
-Hello
-Copy
-%
 #Sai
-testing_own_list
+work
 %
