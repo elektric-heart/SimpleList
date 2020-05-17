@@ -100,7 +100,6 @@ bool List::find_UserList() {
 
     for ( int user_index=0; user_index < (int)MainList.size(); user_index++ ) {
         if ( MainList[user_index][0] == name ) {
-            cout << "User has been found: " << MainList[user_index][0] << "\n";
             list = MainList[user_index];
             CurrentUserIndex = user_index;
             UserFound = true;
