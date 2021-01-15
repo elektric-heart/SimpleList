@@ -13,7 +13,7 @@ Although there are few own UI personalisations :nerd_face: done by myself, the c
 
 **Bug(s):** *(Because of my incompetence and n00b level knowledge..)* :face_with_head_bandage:
 - [ ] Cannot type in sentences into the list items (Need to look up how to allow that in the program) :suspect:
-- [ ] Tell me if you will find any blunder, haha..
+- [ ] Tell me if you find any blunder, haha..
 
 </details>
 
