@@ -5,7 +5,7 @@ void List::print_menu() {
     int choice;
 
     cout << "**************************************\n";
-    cout << "*****Hanlo, fren!*****\n";
+    cout << "     *****Let's get started!*****\n";
     cout << " 1 - Add to list.\n";
     cout << " 2 - Delete from list.\n";
     cout << " 3 - Print list.\n";
@@ -97,7 +97,7 @@ void List::print_list() {
 bool List::find_UserList() {
     bool UserFound = false;
     cout << "\n\n";
-    cout << "***** Welcome " << name << " *****\n\n";
+    cout << "    ***** Welcome " << name << " *****\n\n";
 
     for ( int user_index=0; user_index < (int)MainList.size(); user_index++ ) {
         if ( MainList[user_index][0] == name ) {
