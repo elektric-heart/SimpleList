@@ -1,0 +1,4 @@
+This file keeps obj dir persistently across git so compiler won't throw a fatal error 
+because it couldn't find obj dir according to the Makefile
+
+If you know how to make compiler create a new obj dir, pls make a PR with changes!
