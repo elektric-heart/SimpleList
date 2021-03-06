@@ -13,7 +13,7 @@ int main(int arg_count, char *args[]) {
         data.write(SimpleList.MainList);
     }
     else {
-        cout << "Username not supplied... Who are you!? exiting." << endl;
+        cout << "Username not supplied. Exiting." << endl;
     }
 
     return 0;
